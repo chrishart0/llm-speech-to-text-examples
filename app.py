@@ -5,10 +5,11 @@ base_file_path = "audio/"
 file_name = "test.mp3"
 file_path = base_file_path + file_name
 
-# Available models: "tiny", "small", "medium", "large"
-# Read more here: https://pypi.org/project/openai-whisper/20231117/
+# Available models: "tiny", "small", "medium", "large", "turbo"
+# Read more here: https://pypi.org/project/openai-whisper/
 # model = whisper.load_model("tiny")
-model = whisper.load_model("large")
+# model = whisper.load_model("large")
+model = whisper.load_model("turbo")
 
 result = model.transcribe(file_path)
 print(result["text"])
